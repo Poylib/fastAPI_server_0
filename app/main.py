@@ -15,6 +15,11 @@ class Report(BaseModel):
     reportId: int
 
 
+@app.get("/")
+async def create_item():
+    return {"message": "hello"}
+
+
 @app.post("/items/")
 async def create_item(item: Item):
     # 받은 아이템을 처리하는 로직을 구현합니다.
